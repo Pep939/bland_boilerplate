@@ -1,0 +1,401 @@
+EMERGENCY SAVE - INCOMPLETE DATA
+TIMESTAMP: 2025-02-25 15:25:14
+VIDEO ID: unknown_video
+
+===== TRANSCRIPT =====
+do you know that feeling when you start building something and then uh it just
+gets you so excited that you can't go to sleep uh and you just can't stop
+thinking about it cuz that's where I am at right now for the last 48 hours I've
+been building some voice agents um and man I I think I found what my next
+startup is going to be and in this video I'm going to show you what I built I'm
+going to show you what I think my next startup is going to be and I'm going to
+give you a free boiler plate so you can start building your own um I came
+across Isaiah granite's post he had a post where he created this so it's um a
+basic app related to Star Trek and then when you click open Channel this is the
+USS Enterprise computer Captain Kirk not available can I assist you yeah can
+you tell me what uh Captain Kirk is doing capturing query is running level
+three Diagnostics on ship's propul all right so after I saw that I was like
+holy crap that's so cool if you are not aware Isaiah Granite is the CEO of a
+company called Bland AI you may have seen their ads one of their ads went viral
+it was this one uh still hiring humans hilar very sad so these guys have built
+a phone agent like a voice agent uh it's super fast it works incredibly well
+they've gone very in depth um with figuring out all the plumbing and they've
+just done a fantastic job so anyways I went on to blend's uh website I went
+into the docs uh so I could start exploring how to do what he just did and what
+I came across was the fact that they have web agents basically uh a voice agent
+that can live on a website which got me thinking wouldn't it be cool to build
+in this area because because I do think that the future of uh AI communication
+with humans is not going to be via typing it's most likely going to be either
+face to face you looking at an avatar or voice to voice so um we all know about
+the real-time API with open AI it's expensive I think it's like 15 to 20 bucks
+an hour um working with this is significantly cheaper and it has significantly
+more control aspects um but instead of talking more about this let me just show
+you what I built all right so we have a basic uh nextjs app that you can build
+upon what I have over here is I have the ability to have a chat within my
+browser so just check this out hey it's Ali from learn to build AI how can I
+help you today hey I'm Ali from learn to build AI what are you doing I'm so
+sorry I think there's been a mixup I'm actually the one who's supposed to be
+Ali from learn to build Ai and all right so you get the gist right I could have
+a conversation with it but what if I have a website that I want to implement
+this for um so it got me thinking because I do have a situation where I have a
+bunch of garbage in the garage that needs to be dealt with so I called this
+company they're in Vancouver and I booked the whole meeting they were so fast I
+basically put in an inquiry on their website and they called me within 2
+minutes I genuinely thought that the girl who called me was AI I even asked her
+are you an AI and she's like no but with that being said let's take a look at
+what I can do here so in here I'm going to click this button up here enter our
+website I'm going to enter that website hit enter and it's going to load while
+it's loading I'll tell you exactly what's happening so basically the voice
+agent gets initiated then I go ahead and I put on a website uh what happens in
+the background it uses a tool called fir crawl and Fir craw goes and Maps the
+whole website basically goes and takes every single URL that's associated to
+that website then it sends it to GPT um and GPT goes through all of the URLs
+and pulls out the relevant ones then it takes all of those relevant URLs and
+scrapes each page one by one and then when you scrape all those pages it sends
+it back to GPT and it asks it to create a prompt for your agent and what you
+end up with is an agent Associated to that website so any website um can now be
+turned into a voice agent so it's done loading I'm going to hit refresh and now
+you have it you have 505 junk customer service hello welcome to 505 junk how
+can I assist you with your junk removal needs today do you service North
+Vancouver yes we do service North Vancouver we cover the entire Greater
+Vancouver area including North Vancouver what type of junk removal service are
+you looking for well I have a couch and I have like maybe three bags worth of
+loose junk um do you take that yes so we can definitely take those items for
+the couch it's a bulky item and for the bags of loose junk we'll weigh them and
+provide you with a quote based on our pricing would you like to schedule a
+pickup for today or another day that suits you uh I'm actually comparing your
+service with a bunch of others how does your pricing work our pricing is based
+on the weight of the items to be removed there is a $99 pickup fee for the
+first2 200 and anything over that is charged per pound based on the type of
+items so for your couch and the bags of junk I can give you a more accurate
+quote once I know the exact weight where tell you that we often provide we're
+located in Richmond but we serve the entire Greater Vancouver area including
+North Vancouver so what you saw there was I chatted with it and it took 3
+minutes for it to scrape the whole website build a prompt and build an AI voice
+agent for me for that website think about that think about how easy it is for
+this company to just contact me and say hey we want that voice agent on a
+contact us page the amount of friction that gets reduced by being able to just
+call or have a voice chat right away instead of going through a bunch of
+different websites the value here is insane but what if you're like hey I want
+to do this but I don't know how to prompt it well I have a button right here
+boom it downloads The Prompt for you and there you go here's my prompt I'll
+just explain it to you quickly you have the name of the agent you have the role
+what their objective is their basically their core personality um their style
+of communication some rules that they have to follow and they also have a Q&A
+so this Q&A was created by scraping all the the multiple pages on their website
+and then ultimately ends up creating a Q&A of common questions that a that a
+user will ask um and guys this is just an MVP this could be improved so much
+better but this is what we have so far um so now um I'll do a random website
+just to show you that this isn't some predetermined demo all right let's go to
+um google.com and let's just search um something like Austin Texas roofing
+company roofing company uh all right and let's just pick one that's like here
+kid Roofing I'm G to copy that let's go back here I'm going to create another
+agent oh this one has it wasn't even the full thing it was Austin Roofing so
+let's see what it does I know nothing about this company kid roof.com nothing
+don't mind me I'm just going to have a chicken wing while that loads so this
+must be a really big website cuz this is taking some time so if you go into
+your inspect console and you'll see what's actually happening in the background
+see using FOC craw here and then we scrape it with Ginia um just because it's
+free to scrape it with Ginia but FOC craw has a fantastic mapping tool and it's
+uh by far the best and they also have a free tier perfect let's hit refresh all
+right there we go kid Roofing assistant generated welcome to kid Roofing how
+can I assist you with your Roofing needs today uh hey there where do you
+service we service multiple areas in Central Texas including Austin San Antonio
+Dallas Houston and we also cover Denver Colorado which area are you calling
+from I'm calling from Austin can you tell me more about your services what
+makes your company unique kid Roofing has been in business since 1982 holds an
+A+ BBB rating and has received numerous awards for our outstanding service and
+quality work we offer a wide range of services including roof installation
+repair maintenance and emergency repairs we're committed to providing top
+quality customer service so can you tell me about your reviews do you have good
+reviews bad reviews y we take all feedback seriously and while we strive for
+Perfection we've had very few complaints over the years I can assure you that
+we do our best to address any concerns and ensure customer satisfaction do you
+guys work just on residential no we work on both residential and Commercial
+properties including multif family buildings so we can handle a wide range of
+roofing needs gotcha where is your main location our main office is located in
+Austin Texas at 1212 East Anderson Lane s 200 all right let me just ver I that
+12 oh there we go what's the phone number for uh kid Roofing our phone number
+is 512 67177 91 say that again it's 512 671 7791 you can also find it on our
+website at kid roof.com are you sure the phone number is not 512 931 3988 I
+apologize for the mistake let me verify uh yes I made an error our correct
+phone number is indeed 512 931 3988 thank thank you for correcting me all right
+tell me a little bit more about your company I can tell you that we've been
+familyowned and operated for over 40 years gotcha thank you so much you're and
+just like that I have a voice agent like I said it's not perfect this is an MVP
+it's only using about 10 to 15 pages from their website and that's pretty damn
+spot-on minus the fact that it made an error there so with that being said how
+do I go fix that I would just download this and then I would take a look at the
+data so at the bottom of the data here it should have the phone number now
+where the heck heck did it get this phone number so let me just go and check so
+it is the accurate phone number so that actually is the right phone number it
+seems to be the main business line from their Google that freaking worked cool
+so there you have it you have your own voice assistant uh for any company any
+website um you can generate a voice assistant like that all right so now let me
+show you how to go ahead and download a boiler plate so you could start
+building up on your own all right so in the description of this video you're
+going to find my Bland boiler plate I just made it public about 3 minutes ago
+you want to just click on code copy that go into cursor create a new folder
+desktop land D you can name it whatever you want all right go into new terminal
+get clone paste that it's going to go ahead and download everything here you're
+going to have a readme file where is that readme file read me file all the
+instructions are going to be here um but if you're not reading them and you
+just want me to tell you that's to cool too so you just go into this file over
+here env. local. example and you want to hit rename just take off the example
+part then go to Bland go to sign up so sign in go in the bottom left corner
+click settings API Keys click new API key copy that to clipboard close go here
+put it in there all right you're good to go so far so then what you want to do
+is you want to go API key in here you want to go to terminal new terminal you
+want to do CD blend boiler plate then CD voice chat MPN run Dev and and there
+you go you have a voice agent um this does not have the URL does not have the
+scraping capabilities that is in uh something that I'm building it's not ready
+for public use yet but it is something I'm building upon anyways let's get this
+going yep hello I'm Dave your AI assistant how may I help you today hey Dave
+what are you up to today just waiting for someone to pick up the phone so I can
+rip them apart with some Savage roasts and that someone is you ah lucky me cool
+there you go this is how you do it that's as simple as that if the current
+prompt in there is a roasting prompt so the way that you go ahead and get that
+is um in the file here one to once you're in here SRC click on config you have
+this thing called Agent config and this is where Dave the roast comedian uh
+lives and you could change this any way you like and just like that you have
+your own voice agent it's built upon nextjs and you might be asking why did I
+complicate it and add it as a next JSF is so that you can go ahead and build
+your own SAS um as your own voice agent SAS business um which brings me to what
+I think my next AI startup is going to be so let's just close this they get the
+boiler player if you have any questions just hit me in the comments um awesome
+so presenting to you what I think is going to be my next startup because I'm
+just having so much fun with this all right so this is what I built using that
+boiler plate so you could take the boiler plate you could do whatever you want
+with it my next startup is most likely going to be called AI talk team because
+I think there's so much potential for this but listen um that same do Dave who
+roast people this is him here finally some fresh insecurities to exploit this
+is going to be fun hey Dave should I tell you a little bit about myself or what
+oh oh please do I'm just salivating at the thought of all the juicy flaws I'm
+going to find I've got all day to rip you apart well my name is Ali and I have
+a YouTube channel called learn to build I just started it Ali and you think
+people actually want to learn from you what makes you an expert on building
+anything besides a house of cards that's going to come crashing down the moment
+I start roasting you bro you sound like my comment section so you're already
+used to being hated on her well that's cute but trust me Ally I'm not some
+Anonymous troll hiding behind a screen so there you have it uh now you have
+this little interface of what I'm building um but I wanted to add additional
+agents to this so this is what I did so we have a doctor a job interview coach
+a high performance coach fact Checker um all sorts of different ones so let me
+just show you the fact Checker because this one has tools associated with which
+is what you can add I am Bobby your dedicated fact Checker I'll help you verify
+any information by checking reliable sources what would you like like me to
+look up hey Bobby who won the most recent election in the US the last US
+presidential election was and who won it according to my sources the last US
+presidential election was held on November 2024 and Donald Trump won the
+election securing 312 electoral votes and the national popular vote defeating
+kamla Harris anything else you'd like to know how much did kamla Harris pay
+Oprah let me check if there's any information on that according to my sources
+kamla Harris's campaign paid Oprah Winfrey's production company Harpo
+Productions $1 million for hosting a town hall event in September 20124 however
+it's worth noting that Oprah Winfrey herself has denied receiving a personal
+fee for the event okay we have it uh it is currently November 15th so that
+information is 10 days old um cool so now we have the ability to use tools and
+there are a lot of tools that you could add a custom tools so you could ask it
+to email you notify you you could ask it to do anything all right so as we go
+forward here I'll show you some of the other agents so we got the doctor agent
+the job interview agent um high performance coach uh AI therapist now I think I
+could build a startup just around this one over here um because once you start
+adding tools here like documentation uh context knowledge and so on just this
+becomes incredibly powerful uh we got a philosopher we got a Peter teal like
+character who does linking um we got your leftwing activist your right-wing
+activist so if you like debating um these are agents that you can chat with for
+hours on end and they will hold their ground they'll check their sources and
+they will debate you then we have one just for fun which is Riley the woke one
+hi there just so you don't shy away from calling out privilege let's make this
+conversation an accountable one got you hey Riley who you think of Donald Trump
+winning the most recent election content warning discussion of potentially
+triggering topic to be honest I think it's a prime example of systemic issues
+at play perpetuating harm and amplifying existing inequalities what are your
+thoughts on it all right there you go all right so and then you have the
+relationship so then there's Sam your best friend Sophia your best friend
+female then you got flirting uh assistant so basically Cindy teaches you how to
+flirt James flirts with you um then you have Stacy she's a Dirty Talker and
+this isn't as censored as I expected it to be I was really surprised of how far
+that can go but um if you're interested in building like an AI startup that's
+focused on Virtual Boy girlfriends which is a huge Market uh this will be able
+to assist you um and then startups that are just focused on tutoring uh this
+Alexa tutoring the study partner really good um because what it does is it ends
+up it starts with a a set of questions that asks you what are you studying what
+is your level what's your level of understanding it goes on to perplexity
+follow finds relevant questions and answers and then quizzes you using
+memorization Frameworks um so I think what you can do here is unbelievably
+Dynamic um and there's so much potential for these voice agents so the ones I'm
+most excited about are are AI therapists which I think is wonderful um this job
+interview coach just says like yo what's the job that you're looking for what
+are your qualifications it goes and scrapes the the job posting and then does a
+mock interview with you and encourages you and helps you better understand how
+to answer these questions and present yourself better so yeah so much potential
+here um now earlier I stated that um with the Bland platform um it's very
+different from the open AI realtime API um because it has a couple different
+features these guys have really done a good job figuring out the plumbing um so
+this is just like an example once you have an agent um you're able to go in and
+you you're able to create these conversational Pathways where you can create
+Pathways based on what an individual says so for example if you're the study
+agent you could start off by asking hey what are you studying uh and then it
+goes and pulls that data so there's knowledge bases there's canned answers so
+unbelievably Dynamic like this look at this example of somebody creating a
+receptionist agent there are so many noes here and this is all on a like on a
+no code style you could code it as well which is what I'm doing but a fantastic
+platform so many opportunities here and I'm really surprised this isn't uh all
+over the place right now um these voice agents specifically the one that's
+going to end up um living on the contact page for for businesses is the one
+that I'm most excited about uh every company that does Services should have a
+voice agent that books meetings directly on the website answers questions so
+you just don't lose any leads um so yeah that's the video for today um I hope
+you enjoy that if if you love learning how to build with AI um hit that
+subscribe button because there's no other YouTuber there's no other person on
+this on this platform who's willing to show you what they're building give you
+the code so you could compete with them and show you a bunch of potential
+things that you could do with it hit the like button hit the Subscribe button
+um and leave a comment leave just any comment tell me what you guys want me to
+talk about if there's anything that you saw here you want me to dig deeper into
+uh the relationship um agents the uh AI agents just let me know I think you
+guys are going to love my next video which is going to be focused more on how
+to build the UI for your own web apps all right peace talk to you soon         ───────────────────────────────────────────────────────────────────────────────
+
+
+===== SUMMARY =====
+The text is about the excitement of building voice agents and potential for a
+startup. The author discusses finding inspiration from a company called Bland
+AI, exploring voice agents for websites, and creating a voice agent for a junk
+removal service. The process involves scraping website data, creating prompts,
+and interacting with the generated voice agents. The author shares a
+boilerplate for building voice agents and outlines various agent types like AI
+therapists, job interview coaches, and more. The text emphasizes the potential
+for voice agents in various applications, particularly in improving customer
+services. The author invites engagement from viewers for future content.       ───────────────────────────────────────────────────────────────────────────────
+
+
+===== ACTION PLAN =====
+
+1 Research and explore Bland AI as a source of inspiration for building voice
+agents.
+2 Identify websites where voice agents can be implemented and explore the
+potential market for such solutions.
+3 Develop a specific voice agent concept for a junk removal service,
+considering its unique requirements and target audience.
+4 Learn how to scrape website data to gather relevant information for the
+voice agent.
+5 Create prompts and scripts tailored to the voice agent's intended purpose
+and audience interaction.
+6 Interact with the generated voice agents to test and refine their
+performance and user experience.
+7 Utilize the provided boilerplate for building voice agents as a foundation
+for your own projects.
+8 Explore different types of voice agents, such as AI therapists and job
+interview coaches, to expand your understanding of their applications.
+9 Recognize the potential of voice agents in improving customer service and
+consider how this technology can be leveraged in various industries.
+10 Engage with the author and other viewers to exchange ideas and stay updated
+on future content related to building voice agents.                        ───────────────────────────────────────────────────────────────────────────────
+generate_cursor_prompt ⚙️ Function Output
+Mission and Purpose:
+
+The mission of this Cursor prompt is to develop an AI-powered voice agent
+optimized for improving customer service interactions in various industries.
+The purpose is to create scalable, efficient, and interactive voice agents
+capable of performing tasks ranging from customer inquiries to personalized
+services such as AI therapists or job interview coaches. This AI agent will
+leverage existing technologies and data to provide engaging and responsive
+experiences.
+
+Operating Environment:
+
+The voice agent will operate in a cloud-based environment integrated with web
+platforms. It will require access to websites or databases for data extraction
+and processing. The operating environment should support real-time voice
+interactions and seamless integration with websites where the voice agent is
+deployed.
+
+Agent Roles and Capabilities:
+
+1 Data Scraper:
+• Scrape relevant content from predefined websites to build a knowledge
+base for the voice agent.
+• Input: Website URL, scraping parameters.
+• Output: Processed text data.
+2 Voice Interaction Manager:
+• Handle real-time voice inputs and provide coherent voice responses.
+• Input: User voice commands.
+• Output: AI-generated voice responses.
+3 Dialogue Flow Designer:
+• Design conversation pathways and manage stateful interactions with users.
+• Input: Conversation scripts, user input history.
+• Output: Context-aware dialogue paths.
+4 Performance Monitor:
+• Track and log voice agent interactions to enhance future performance.
+• Input: Interaction logs.
+• Output: Performance reports and insights.
+
+Required Tools and APIs:
+
+1 Web Scraping Tool (e.g., BeautifulSoup, Scrapy):
+• Description: Extract specific data from websites to inform the voice
+agent’s responses.
+• Input/Output Parameters: URL, data schema -> Extracted data.
+• Error Handling: Retry mechanisms on failed attempts, alerting if the site
+is non-responsive or inaccessible.
+2 Speech Recognition API (e.g., Google Cloud Speech-to-Text):
+• Description: Convert spoken language into text.
+• Input/Output Parameters: Audio stream -> Text transcription.
+• Error Handling: Fallback strategies, quality checks for transcription
+accuracy.
+3 Text-to-Speech API (e.g., Amazon Polly):
+• Description: Transform text responses into natural human speech.
+• Input/Output Parameters: Text input -> Synthesized speech.
+• Error Handling: Default to pre-recorded messages if synthesis fails.
+4 Natural Language Processing API (e.g., OpenAI GPT-3):
+• Description: Generate human-like text responses for voice interactions.
+• Input/Output Parameters: Text input -> Text output.
+• Error Handling: Implement checks for profanity and context relevance.
+
+Communication Flows:
+
+1 User initiates a voice interaction on a website.
+2 Voice input is received and processed through the Speech Recognition API.
+3 NLP API generates a relevant response based on processed data and
+interaction history.
+4 Text response is converted to audio via Text-to-Speech API.
+5 Response is communicated back to the user in voice form.
+6 Interaction details logged by Performance Monitor for further analysis.
+
+Agent's Role and Responsibilities:
+
+• Role: Serve as a real-time, interactive voice facilitator for customer
+engagements and personalized services.
+• Responsibilities: Ensure accurate voice interaction, maintain conversation
+context, handle user queries effectively, and learn over time through
+feedback loops.
+
+Goals and Objectives:
+
+• Deploy a voice agent capable of understanding and responding to user
+inquiries in real-time.
+• Enhance user experience on client websites through conversational AI.
+• Continuously improve agent performance through data-driven insights and user
+feedback.
+
+Process Workflow:
+
+1 Initialization: Set up API keys, configure tools.
+2 Data Gathering: Execute web scraping to build a knowledge base.
+3 User Interaction: Process real-time voice inputs and generate responses.
+4 Feedback Loop: Monitor interactions, gather performance data, and optimize.
+
+Production-Ready Best Practices:
+
+• Error Handling: Implement robust error recovery protocols to minimize
+downtime.
+• Input Validation: Ensure inputs are sanitized and contextually relevant
+before processing.
+• API Key Management: Secure keys with encryption and monitor usage to prevent
+abuse.
+• Logging and Monitoring: Establish comprehensive logging to track
+interactions and system performance, enabling proactive issue resolution and
+informed enhancements.                                                      ───────────────────────────────────────────────────────────────────────────────
+
